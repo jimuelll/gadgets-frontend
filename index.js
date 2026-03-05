@@ -7,7 +7,7 @@ window.addEventListener("load", () => {
 function getUsers() {
   let html = "";
   //FETCH API
-  fetch("http://localhost:7000/api/products", { mode: "cors" })
+  fetch("https://gadgets-rc3z.onrender.com/api/products", { mode: "cors" })
     .then((response) => {
       console.log(response);
       return response.json();
@@ -33,7 +33,7 @@ submit.addEventListener("click", () => {
     quantity: document.querySelector("#quantity").value,
     supplier: document.querySelector("#supplier").value,
   };
-  fetch("http://localhost:7000/api/products", {
+  fetch("https://gadgets-rc3z.onrender.com/api/products", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(product),
@@ -43,3 +43,4 @@ submit.addEventListener("click", () => {
   alert("Product added successfully");
   location.reload();
 });
+
