@@ -27,7 +27,6 @@ function getUsers() {
 //POST API
 submit.addEventListener("click", () => {
   const product = {
-    id: document.querySelector("#id").value,
     itemName: document.querySelector("#itemName").value,
     unitPrice: document.querySelector("#price").value,
     quantity: document.querySelector("#quantity").value,
@@ -43,4 +42,5 @@ submit.addEventListener("click", () => {
   alert("Product added successfully");
   location.reload();
 });
+
 
